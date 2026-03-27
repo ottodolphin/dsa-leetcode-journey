@@ -1,25 +1,7 @@
 #include <iostream>
 #include <vector>
-
+#include <cmath>
 using namespace std;
-
-class Solution {
-public:
-    void moveZeroes(vector<int>& nums) {
-        int pos = 0;
-        for(int i = 0; i < nums.size(); i++) {
-            if(nums[i] != 0 ) {
-                swap(nums[pos], nums[i]);
-                pos++;
-            }
-        }
-        cout << "[";
-        for(int j : nums) {
-            cout << j <<",";
-        }
-        cout << "]";
-    }
-};
 
 void swap(int &a, int &b) {
     int temp = a;
@@ -38,13 +20,6 @@ int main() {
         cin >> nums[i]; 
     }
 
-    int pos = 0;
-    for(int i = 0; i < n; i++) {
-        if(nums[i]!=0) {
-        swap(nums[pos], nums[i]);
-        pos++;
-    }
-}
     
     for(int i : nums) {
         cout << i << " ";
